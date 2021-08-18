@@ -29,7 +29,7 @@ const COMMON = function (mydir, page) {
       svelte({
         dev: !production,
         css: (css) => {
-          css.write(mydir + page + "/bundle.css", !production); // disable sourcemap in prod
+          css.write("/bundle.css", !production); // disable sourcemap in prod
         },
       }),
       resolve({ browser: true }),
